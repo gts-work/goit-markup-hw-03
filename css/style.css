@@ -1,3 +1,15 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+/* ROOT Variables */
+
 /* Primary color #757575 */
 /* Secondary color #212121 */
 /* Active color #2196f3 */
@@ -12,7 +24,8 @@
     --secondary-background-color: #f5f4fa;
     --color-white: #ffffff;
     --color-secondary-grey: rgba(255, 255, 255, 0.6);
-    --background-button-tab: #f5f4fa;
+    --color-button: rgba(0, 0, 0, 0.15);
+    --background-footer: #2f303a;
 }
 
 /* Body */
@@ -22,18 +35,116 @@ body {
     font-family: Roboto, sans-serif;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
 /* List */
 .list {
     list-style: none;
+
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* Images blocks */
+.image {
+    display: block;
+}
+
+/* Container */
+.container {
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
+
+    margin-left: auto;
+    margin-right: auto;
+    /* margin-bottom: 25px; */
+    /* margin-top: 25px; */
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    width: 1230px;
+
+    outline: 1px solid blue;
+}
+
+/* Button */
+.button {
+    display: inline-block;
+
+    min-width: 200px;
+    height: 50px;
+    padding: 10px 32px;
+
+    background-color: var(--active-color);
+    box-shadow: 0px 4px 4px var(--color-button);
+    border-radius: 4px;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    text-align: center;
+    text-decoration: none;
+
+    color: var(--color-white);
+}
+
+/* LIST */
+.list p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* Header */
+.header {
+    outline: 1px solid rgb(17, 148, 0);
+}
+
+.header > .container {
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
 
 /* Navigator */
+.container > nav {
+    outline: 1px solid tomato;
+}
+
+.site-nav {
+    display: flex;
+    /* align-items: center; */
+
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+}
+
 .link {
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
+}
+
+.site-nav > .item:not(:last-child) {
+    margin-right: 50px;
+}
+
+.site-nav.contact > .item {
+    margin-right: 30px;
 }
 
 .site-nav .link {
@@ -49,17 +160,42 @@ body {
     color: var(--active-color);
 }
 
+/* MAIN */
+.main {
+    outline: 1px solid teal;
+}
+
+/* .main > .container {
+    padding-top: 25px;
+    padding-bottom: 25px;
+} */
+
 /* Hero */
 .hero {
+    text-align: center;
     color: var(--secondary-text-color);
+
+    margin-bottom: 90px;
+
+    outline: 1px solid tomato;
+}
+
+.hero > .title {
+    margin-bottom: 30px;
 }
 
 .hero .link {
     background-color: var(--active-color);
     color: var(--color-white);
+
+    /* margin-top: 30px; */
 }
 
 /* Section */
+.section {
+    outline: 1px solid tomato;
+}
+
 .section .section-title {
     color: var(--secondary-text-color);
 
@@ -85,7 +221,17 @@ body {
     font-weight: 700;
 }
 
+.section-title {
+    margin-bottom: 50px;
+}
+
 /* Features */
+.features {
+    margin-bottom: 94px;
+
+    outline: 1px solid tomato;
+}
+
 .features .title {
     color: var(--secondary-text-color);
 
@@ -93,6 +239,8 @@ body {
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.03em;
+
+    margin-bottom: 10px;
 }
 
 .features .description {
@@ -104,9 +252,14 @@ body {
     letter-spacing: 0.03em;
 }
 
+/* What are we doing */
+.section.we-doing {
+    margin-bottom: 94px;
+}
+
 /* Filters */
 .filters .but {
-    background-color: var(--background-button-tab);
+    background-color: var(--secondary-background-color);
     color: var(--secondary-text-color);
 
     font-weight: 500;
@@ -139,7 +292,36 @@ body {
     letter-spacing: 0.03em;
 }
 
+/* Commands */
+.command {
+    text-align: center;
+    background-color: var(--secondary-background-color);
+}
+
+.command .image {
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+.command .text.primary {
+    margin-bottom: 10px;
+}
+
 /* Footer */
+.footer {
+    background-color: var(--background-footer);
+}
+
+.footer > .container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.footer-address p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 .footer .address {
     color: var(--color-white);
 }
