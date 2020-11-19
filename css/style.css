@@ -20,7 +20,7 @@ html {
     --primary-text-color: #757575;
     --secondary-text-color: #212121;
     --active-color: #2196f3;
-    --primary-background-color: #e5e5e5;
+    --primary-background-color: ##ffffff;
     --secondary-background-color: #f5f4fa;
     --color-white: #ffffff;
     --color-secondary-grey: rgba(255, 255, 255, 0.6);
@@ -84,21 +84,26 @@ h6 {
 .button {
     display: inline-block;
 
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.88;
+    text-align: center;
+    text-decoration: none;
+
+    border-radius: 4px;
+    border-color: transparent;
+}
+
+.hero .button.active {
     min-width: 200px;
     height: 50px;
     padding: 10px 32px;
 
     background-color: var(--active-color);
     box-shadow: 0px 4px 4px var(--color-button);
-    border-radius: 4px;
+    color: var(--color-white);
 
     font-weight: 700;
-    font-size: 16px;
-    line-height: 1.88;
-    text-align: center;
-    text-decoration: none;
-
-    color: var(--color-white);
 }
 
 /* LIST */
@@ -165,6 +170,11 @@ h6 {
     outline: 1px solid teal;
 }
 
+.main.page-secondary {
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+
 /* .main > .container {
     padding-top: 25px;
     padding-bottom: 25px;
@@ -175,20 +185,18 @@ h6 {
     text-align: center;
     color: var(--secondary-text-color);
 
-    margin-bottom: 90px;
+    /* margin-bottom: 90px; */
 
     outline: 1px solid tomato;
 }
 
-.hero > .title {
+.hero .title {
     margin-bottom: 30px;
 }
 
 .hero .link {
     background-color: var(--active-color);
     color: var(--color-white);
-
-    /* margin-top: 30px; */
 }
 
 /* Section */
@@ -227,7 +235,8 @@ h6 {
 
 /* Features */
 .features {
-    margin-bottom: 94px;
+    padding-top: 90px;
+    padding-bottom: 94px;
 
     outline: 1px solid tomato;
 }
@@ -254,11 +263,19 @@ h6 {
 
 /* What are we doing */
 .section.we-doing {
-    margin-bottom: 94px;
+    padding-bottom: 94px;
 }
 
 /* Filters */
-.filters .but {
+.filters {
+    margin-bottom: 34px;
+
+    text-align: center;
+}
+
+.button.filter {
+    min-width: 73px;
+
     background-color: var(--secondary-background-color);
     color: var(--secondary-text-color);
 
@@ -266,12 +283,20 @@ h6 {
     font-size: 16px;
     line-height: 1.63;
     letter-spacing: 0.03em;
+
+    padding: 6px 22px;
 }
 
-.filters .but.active,
-.filters .but:hover,
-.filters .but:focus {
+.button.filter:not(:last-child) {
+    margin-right: 8px;
+}
+
+.button.filter.active,
+.button.filter:hover,
+.button.filter:focus {
     background-color: var(--active-color);
+    box-shadow: 0px 4px 4px var(--color-button);
+    border-radius: 4px;
     color: var(--color-white);
 }
 
@@ -280,20 +305,39 @@ h6 {
     color: var(--secondary-text-color);
 
     font-weight: 700;
-    font-size: 16px;
-    line-height: 1.63;
+    font-size: 18px;
+    line-height: 2;
     letter-spacing: 0.03em;
+
+    margin-bottom: 4px;
+    margin-left: 24px;
+    margin-right: 24px;
 }
 
 .portfolio-description {
+    display: inline-block;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.87;
     letter-spacing: 0.03em;
+
+    margin-left: 24px;
+    margin-right: 24px;
+}
+
+.portfolio img {
+    margin-bottom: 20px;
+}
+
+.portfolio.list > .item {
+    padding-bottom: 20px;
 }
 
 /* Commands */
 .command {
+    padding-top: 94px;
+    padding-bottom: 94px;
+
     text-align: center;
     background-color: var(--secondary-background-color);
 }
