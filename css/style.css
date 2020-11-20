@@ -26,6 +26,7 @@ html {
     --color-secondary-grey: rgba(255, 255, 255, 0.6);
     --color-button: rgba(0, 0, 0, 0.15);
     --background-footer: #2f303a;
+    --border-color: #eeeeee;
 }
 
 /* Body */
@@ -62,22 +63,16 @@ h6 {
 
 /* Container */
 .container {
-    /* display: flex; */
-    /* justify-content: space-between; */
-    /* align-items: center; */
-
     margin-left: auto;
     margin-right: auto;
-    /* margin-bottom: 25px; */
-    /* margin-top: 25px; */
     padding-top: 0;
     padding-bottom: 0;
     padding-left: 15px;
     padding-right: 15px;
 
-    width: 1230px;
+    width: 1200px;
 
-    outline: 1px solid blue;
+    /* outline: 1px solid blue; */
 }
 
 /* Button */
@@ -114,7 +109,7 @@ h6 {
 
 /* Header */
 .header {
-    outline: 1px solid rgb(17, 148, 0);
+    /* outline: 1px solid rgb(17, 148, 0); */
 }
 
 .header > .container {
@@ -124,16 +119,24 @@ h6 {
 
 /* Navigator */
 .container > nav {
-    outline: 1px solid tomato;
+    /* outline: 1px solid tomato; */
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
 }
 
 .site-nav {
     display: flex;
-    /* align-items: center; */
 
     margin-left: 0;
     margin-right: 0;
     padding-left: 0;
+}
+
+.site-nav.menu {
+    margin-left: 93px;
 }
 
 .link {
@@ -142,18 +145,21 @@ h6 {
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
+    text-decoration: none;
 }
 
 .site-nav > .item:not(:last-child) {
     margin-right: 50px;
 }
 
-.site-nav.contact > .item {
-    margin-right: 30px;
-}
-
 .site-nav .link {
+    display: block;
     color: var(--secondary-text-color);
+
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    /* outline: 1px solid tomato; */
 }
 
 .site-nav .link:hover,
@@ -165,9 +171,13 @@ h6 {
     color: var(--active-color);
 }
 
+.site-nav.contact {
+    margin-left: auto;
+}
+
 /* MAIN */
 .main {
-    outline: 1px solid teal;
+    /* outline: 1px solid teal; */
 }
 
 .main.page-secondary {
@@ -175,19 +185,12 @@ h6 {
     padding-bottom: 90px;
 }
 
-/* .main > .container {
-    padding-top: 25px;
-    padding-bottom: 25px;
-} */
-
 /* Hero */
 .hero {
     text-align: center;
     color: var(--secondary-text-color);
 
-    /* margin-bottom: 90px; */
-
-    outline: 1px solid tomato;
+    /* outline: 1px solid tomato; */
 }
 
 .hero .title {
@@ -201,7 +204,7 @@ h6 {
 
 /* Section */
 .section {
-    outline: 1px solid tomato;
+    /* outline: 1px solid tomato; */
 }
 
 .section .section-title {
@@ -238,7 +241,7 @@ h6 {
     padding-top: 90px;
     padding-bottom: 94px;
 
-    outline: 1px solid tomato;
+    /* outline: 1px solid tomato; */
 }
 
 .features .title {
@@ -274,8 +277,6 @@ h6 {
 }
 
 .button.filter {
-    min-width: 73px;
-
     background-color: var(--secondary-background-color);
     color: var(--secondary-text-color);
 
@@ -283,6 +284,8 @@ h6 {
     font-size: 16px;
     line-height: 1.63;
     letter-spacing: 0.03em;
+
+    min-width: 73px;
 
     padding: 6px 22px;
 }
@@ -301,6 +304,13 @@ h6 {
 }
 
 /* Portfolio */
+.portfolio.list {
+    display: flex;
+    flex-wrap: wrap;
+
+    /* outline: 1px solid tomato; */
+}
+
 .portfolio-title {
     color: var(--secondary-text-color);
 
@@ -316,6 +326,7 @@ h6 {
 
 .portfolio-description {
     display: inline-block;
+
     font-weight: 400;
     font-size: 16px;
     line-height: 1.87;
@@ -325,21 +336,34 @@ h6 {
     margin-right: 24px;
 }
 
-.portfolio img {
+.portfolio .img-item {
     margin-bottom: 20px;
 }
 
-.portfolio.list > .item {
-    padding-bottom: 20px;
+.portfolio > .item {
+    border: 1px solid var(--border-color);
+
+    width: calc((100% - 60px) / 3);
+    height: 404px;
+
+    /* background-color: tomato; */
+}
+
+.portfolio > .item:not(:nth-child(3n)) {
+    margin-right: 30px;
+}
+
+.portfolio > .item:not(:nth-last-child(-n + 3)) {
+    margin-bottom: 30px;
 }
 
 /* Commands */
 .command {
-    padding-top: 94px;
-    padding-bottom: 94px;
-
     text-align: center;
     background-color: var(--secondary-background-color);
+
+    padding-top: 94px;
+    padding-bottom: 94px;
 }
 
 .command .image {
